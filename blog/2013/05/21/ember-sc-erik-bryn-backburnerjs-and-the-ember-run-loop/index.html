@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Meetup - Agile Leader Storyline - Still Interested, Still Learning</title>
+  <title>Ember SC Backburner.js and the Ember Run Loop - Still Interested, Still Learning</title>
   <meta name="author" content="Scott (Old Fart Developer) Smith">
 
   
-  <meta name="description" content="Agile Leader Storyline (&ldquo;Your Life is a Movie&rdquo;) I attended a very interesting presentation by agile master Scott Dunn at the last
-Agile &hellip;">
+  <meta name="description" content="Speaker: Eryk Bryn Summary How Ember JS&rsquo;s &lsquo;run loop&rsquo; works. Pretalk Erik Talked about his history w/ Ember. He was a Rails &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Agile &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline">
+  <link rel="canonical" href="http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-erik-bryn-backburnerjs-and-the-ember-run-loop">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Still Interested, Still Learning" type="application/atom+xml">
@@ -69,7 +68,7 @@ Agile &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Meetup - Agile Leader Storyline</h1>
+      <h1 class="entry-title">Ember SC Backburner.js and the Ember Run Loop</h1>
     
     
       <p class="meta">
@@ -85,92 +84,103 @@ Agile &hellip;">
   
 
 
-<time datetime="2014-02-22T16:05:38-08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+<time datetime="2013-05-21T00:00:00-07:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h2>Agile Leader Storyline (&ldquo;Your Life is a Movie&rdquo;)</h2>
+<div class="entry-content"><p>Speaker: Eryk Bryn</p>
 
-<p>I attended a very interesting presentation by agile master Scott Dunn at the last
-<a href="http://www.linkedin.com/groupItem?view=&amp;gid=1833155&amp;type=member&amp;item=5837424884862439427&amp;qid=fdcd7763-0ea9-41f5-85f0-191df40a657e&amp;goback=%2Egmp_1833155">Agile Socal meetup</a>
-about how &ldquo;living a better story&rdquo; can enhance your scrum master performance (or any part of your left, for that matter).</p>
+<h2>Summary</h2>
 
-<p><em>O No! Not another &lsquo;self-help&rsquo; experience!</em></p>
-
-<p>But, lo, I liked it!</p>
+<p>How Ember JS&rsquo;s &lsquo;run loop&rsquo; works.</p>
 
 <!-- more -->
 
 
-<h3>The Hook</h3>
+<h2>Pretalk</h2>
 
-<p>Here&rsquo;s how Scott explained it:</p>
+<p>Erik Talked about his history w/ Ember.  He was a Rails developer that was doing more and more Javascript work.</p>
 
-<p>Exercise:</p>
+<p>Was sold on Yehuda&rsquo;s talk about templates.</p>
 
-<ol>
-<li>Write down where you expect to be in 1 year.</li>
-<li>Write down where you expect to be in 5 years.  <em>been there, done that (yawn)</em></li>
-<li>Now, pretend your life is a script in a movie.  Now where do you expect to be?  <em>huh?</em></li>
-</ol>
+<h3>The Great Divide</h3>
 
+<p>Do you do all Javascript instead of HTML?  SproutCore did this.</p>
 
-<h3><em>Okay, go on</em></h3>
+<p>But EmberJS leverages HTML, which is becoming more powerful.</p>
 
-<p>Scott then asked us to answer the following question about movie plot lines:</p>
+<p>Javascript is powerful enough to make web applications like native applications.</p>
+
+<p>Serious Javascript development with Ember; feels fortunate.</p>
+
+<h1>Talk</h1>
+
+<h2>Backburner.js</h2>
+
+<p>Is a micro-library that now is the Ember Run Loop.</p>
+
+<h2>What Does the Runloop Do?</h2>
+
+<p>It&rsquo;s a queue.</p>
+
+<p>Erik: all about coalescing.  Keeps the DOM from being updated unnecessarily.</p>
+
+<p>Ember hides BackBurner from you.</p>
+
+<p>Run loop is a set of queues:</p>
 
 <ul>
-<li>Plot A: Introduced to the main character.  Thngs get better for him.  What&rsquo;s the main character like?</li>
-<li>Plot B: Introduced to the main character.  Bad shit happens to him and he has to deal with it.  What&rsquo;s the main
-character like afterwards?</li>
+<li>sync</li>
+<li>Actions</li>
+<li>render</li>
+<li>afterRender</li>
+<li>destroy</li>
 </ul>
 
 
-<p>Scott pointed out that no one makes movies using plot A because it would be <em>boring</em>.  <em>(I suspect that&rsquo;s what
-travelogues are about.)</em></p>
+<p>Libraries can add their own queues</p>
 
-<p>Indeed, virtually all commercial movies deal with Plot B, because <strong>stories</strong> are all about how people change in the
-process of overcoming difficulty.</p>
+<h3>Sync</h3>
 
-<p>I.e.:</p>
+<p>Is for synchronizing bindings.</p>
+
+<p>2 kinds of bindings (didn&rsquo;t get the details).</p>
+
+<h3>Actions</h3>
+
+<p>All the deferred actions get put here.</p>
+
+<h3>Render and AfterRender</h3>
+
+<p>Here&rsquo;s where the DOM is manipulated.</p>
+
+<p>The afterRender queue is where you schedule activities after Ember has manipulated the DOM.</p>
+
+<h3>Destroy</h3>
+
+<p>Where objects are destroyed.</p>
+
+<h2>Why does Backburner exist?</h2>
 
 <ul>
-<li>Difficult: interesting</li>
-<li>Easy: boring</li>
+<li>Performance</li>
+<li>Modularity</li>
+<li>Cleaner code</li>
+<li>Better debugging</li>
+<li>Sharing the wealth</li>
 </ul>
 
 
-<p>Scott suggests that this applies to our own lives as well as movies.  <strong> <em>D&#8217;oh,
-except somehow this was a relevation, er, revelation to
-me.</em> </strong></p>
+<p>Erik asserts that the source code for Backburner is very readable.</p>
 
-<p>Frankly, the rest of the presentation, while very good, simply filled in the ramifications,
-and references to the material he uses is in the links below.</p>
+<p>Debugging deferred / asynchronous actions is hard.</p>
 
-<p>At the end of his presentation, I thanked him.</p>
+<p>But Backburner makes this much easier.</p>
 
-<p>When I got home, I tore up my travelogue and am working on a script.  I&rsquo;ll let you know how it goes.</p>
-
-<h2>Links</h2>
-
-<h3>Agile Leader Storyline</h3>
-
-<ul>
-<li><a href="http://www.storyline.conferences">http://www.storyline.conferences</a></li>
-</ul>
-
-
-<h3>For Scott Dunn</h3>
-
-<ul>
-<li><a href="scott@rocketninesolutions.com">email</a></li>
-<li><a href="http://scottdunn.blogspot.com">blog</a></li>
-<li><a href="http://twitter.com/sdunnrocket9">twitter</a></li>
-</ul>
-
+<p>New York Ember meeting talks about Ember testing.</p>
 </div>
 
 
@@ -193,12 +203,12 @@ and references to the material he uses is in the links below.</p>
   
 
 
-<time datetime="2014-02-22T16:05:38-08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+<time datetime="2013-05-21T00:00:00-07:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/agile/'>Agile</a>
+    <a class='category' href='/blog/categories/presentation/'>Presentation</a>
   
 </span>
 
@@ -207,7 +217,7 @@ and references to the material he uses is in the links below.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline/" data-via="_ofd" data-counturl="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-erik-bryn-backburnerjs-and-the-ember-run-loop/" data-via="_ofd" data-counturl="http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-erik-bryn-backburnerjs-and-the-ember-run-loop/" >Tweet</a>
   
   
   
@@ -216,8 +226,10 @@ and references to the material he uses is in the links below.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/02/09/la-rubyconf-writing-games-with-ruby/" title="Previous Post: Writing Games with Ruby">&laquo; Writing Games with Ruby</a>
+        <a class="basic-alignment left" href="/blog/2013/05/21/ember-sc-emberella/" title="Previous Post: Ember SC Emberella">&laquo; Ember SC Emberella</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2013/05/21/ember-sc-flow-feeds/" title="Next Post: Ember SC Flow Feeds">Ember SC Flow Feeds &raquo;</a>
       
     </p>
   </footer>

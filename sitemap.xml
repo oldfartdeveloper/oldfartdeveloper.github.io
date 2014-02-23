@@ -2,17 +2,97 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
+            http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-maintainable-views/
+        </loc>
+        <lastmod>2014-02-22T16:34:36-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-monday-dhh-keynote/
+        </loc>
+        <lastmod>2014-02-22T16:35:04-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-monday-dual-booting-rails-2-and-rails-3md/
+        </loc>
+        <lastmod>2014-02-22T16:35:14-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-monday-know-thine-app/
+        </loc>
+        <lastmod>2014-02-22T16:35:28-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-natural-languages/
+        </loc>
+        <lastmod>2014-02-22T16:37:49-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-emberella/</loc>
+        <lastmod>2014-02-22T16:37:49-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-erik-bryn-backburnerjs-and-the-ember-run-loop/
+        </loc>
+        <lastmod>2014-02-22T16:37:49-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-flow-feeds/</loc>
+        <lastmod>2014-02-22T16:37:49-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-addressing-sexism/
+        </loc>
+        <lastmod>2014-02-22T16:37:59-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-c-ruby/</loc>
+        <lastmod>2014-02-22T16:38:09-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-overview/</loc>
+        <lastmod>2014-02-22T16:38:36-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-pair-programming/</loc>
+        <lastmod>2014-02-22T16:38:57-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-tdd-and-solid-design/
+        </loc>
+        <lastmod>2014-02-22T16:39:21-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-write-small-things/
+        </loc>
+        <lastmod>2014-02-22T16:40:42-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-writing-games-with-ruby/
+        </loc>
+        <lastmod>2014-02-22T16:40:54-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
             http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline/
         </loc>
-        <lastmod>2014-02-22T16:07:44-08:00</lastmod>
+        <lastmod>2014-02-22T16:41:09-08:00</lastmod>
     </url>
     <url>
         <loc>http://oldfartdeveloper.github.io/blog/archives/</loc>
-        <lastmod>2014-02-22T16:07:44-08:00</lastmod>
+        <lastmod>2014-02-22T16:41:09-08:00</lastmod>
     </url>
     <url>
         <loc>http://oldfartdeveloper.github.io/</loc>
-        <lastmod>2014-02-22T16:07:44-08:00</lastmod>
+        <lastmod>2014-02-22T16:41:09-08:00</lastmod>
     </url>
     <url>
         <loc>http://oldfartdeveloper.github.io/robots.txt</loc>

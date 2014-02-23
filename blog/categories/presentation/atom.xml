@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Presentation | Still Interested, Still Learning]]></title>
+  <link href="http://oldfartdeveloper.github.io/blog/categories/presentation/atom.xml" rel="self"/>
+  <link href="http://oldfartdeveloper.github.io/"/>
+  <updated>2014-02-22T16:42:31-08:00</updated>
+  <id>http://oldfartdeveloper.github.io/</id>
+  <author>
+    <name><![CDATA[Scott (Old Fart Developer) Smith]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Writing Games With Ruby]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-writing-games-with-ruby/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-writing-games-with-ruby</id>
+    <content type="html"><![CDATA[<p>Confession: writing games is FUN!</p>
+
+<p>Because: Ruby!</p>
+
+<!-- more -->
+
+
+<p><code>
+gem install gosu
+</code></p>
+
+<h1>Gosu &ndash; Game Library</h1>
+
+<p>2D game development library for the Ruby and C++ programming languages.</p>
+
+<h1>Game Loop</h1>
+
+<p>In a loop it calls</p>
+
+<ul>
+<li>update</li>
+<li>draw</li>
+<li>button down</li>
+<li>button up</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Writing Small Things]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-write-small-things/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-write-small-things</id>
+    <content type="html"><![CDATA[<h2>Small Code</h2>
+
+<ul>
+<li>Not about less code.</li>
+<li>Rather it&rsquo;s about organizing the code into smaller classes and smaller methods.</li>
+<li>Don&rsquo;t start with it; refactor towards it.</li>
+</ul>
+
+
+<p>Why?</p>
+
+<!-- more -->
+
+
+<ul>
+<li>We don&rsquo;t know the future</li>
+<li>Raise the level of abstraction</li>
+<li>Create composable components</li>
+<li>Prefer delegation over inheritance.</li>
+</ul>
+
+
+<p>all so you can enable future change.</p>
+
+<p>Challenges of small code:</p>
+
+<ul>
+<li>Dependency Management</li>
+<li>Context Management</li>
+</ul>
+
+
+<p>Main Tools</p>
+
+<ul>
+<li>extract method</li>
+<li>extract class</li>
+<li>composed method</li>
+</ul>
+
+
+<p>Screensize is good size constraint.</p>
+
+<p>Minimize number of arguments.</p>
+
+<h1>Methods</h1>
+
+<p>&ldquo;The object programs that live best and longest are those with short methods.&rdquo;</p>
+
+<p>-Refactoring by Fields, Harvey, Fowler, Black</p>
+
+<h2>The first rule of methods</h2>
+
+<p>Do one thing.  Do it well.  Do only that thing. (don&rsquo;t have side effects)</p>
+
+<p>Use descriptive Names</p>
+
+<p>The fewer arguments, the better.  (constructor can take option hash)</p>
+
+<p>Separate Queries from Commands</p>
+
+<p>Don&rsquo;t repeat yourself.</p>
+
+<h2>let&rsquo;s Build aCommand Line Option Library</h2>
+
+<p>How do we isolate abstractions?</p>
+
+<ul>
+<li>Separate the &ldquo;what&rdquo; from the &ldquo;how&rdquo;</li>
+</ul>
+
+
+<h1>Miscellaneous</h1>
+
+<p>presentation will be available on his SlideShare account soon.</p>
+
+<h1>Presenter</h1>
+
+<p>Mark runs Enable Labs, consulting</p>
+
+<p>Mark Menard</p>
+
+<p>@mark_menard</p>
+
+<p>Ruby for about 5 years</p>
+
+<p>&lsquo;The great thing about writing shitty code that &ldquo;just works,&rdquo; is that it is too risky and too expensive to change,
+so it just lives forever.&rsquo;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TDD and SOLID Design]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-tdd-and-solid-design/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-tdd-and-solid-design</id>
+    <content type="html"><![CDATA[<p>Intention of SOLID principle is to make better code and more testable code.  Here&rsquo;s how.</p>
+
+<!-- more -->
+
+
+<h2>Wishful Testing</h2>
+
+<p>In a shipping class example,</p>
+
+<p><code>ruby
+Shipping::Rate.stub(:new).with(
+order.stub(non_digital_items).and_return(0)
+</code></p>
+
+<p>Now these can be wrapped by methods.</p>
+
+<h2>Liskoff Substitution Principle</h2>
+
+<p>Derived classes must be substitutable for their base classes</p>
+
+<p>Contract Test</p>
+
+<p><code>ruby
+it_should_behave_like "s shipping method"
+</code>
+* Dependency inversion
+* Open Closed
+* Interface Segregation</p>
+
+<h2>Summary</h2>
+
+<blockquote><p>&ldquo;I&rsquo;m not a great programmer; I&rsquo;m just a good programmer with great habits&rdquo;  &mdash;Kent Beck</p></blockquote>
+
+<p>SOLID principles help you acquire great habits. @sebasoga</p>
+
+<p>Question: Any of these principles good for testing ActiveRecord models?</p>
+
+<p>Answer: Only have your model info specific to database (scopes, etc).
+Business logic put into different classes.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I Have Pair Programmed for 27,000 Hours: Ask Me Anything!]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-pair-programming/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-pair-programming</id>
+    <content type="html"><![CDATA[<p>Notes I took during this Q/A presentation at <a href="http://larubyconf.com/schedule">LA RubyConf 2014</a>.</p>
+
+<p><strong>Takeaway:</strong> Good reminder of how important pair programming is, and why I should &ldquo;not shirk&rdquo; it as much as I do.</p>
+
+<p>Presenter: Joe Moore</p>
+
+<!-- more -->
+
+
+<p><a href="https://twitter.com/joem">@joem</a> &ndash; <a href="http://remotepairprogramming.com">remoteprogramming.com</a></p>
+
+<h2>How do you get over being nervous?</h2>
+
+<p>Pair a lot.</p>
+
+<h2>What is pair programming in general?</h2>
+
+<p>2 people working together on the same computer.</p>
+
+<h2>When is pair programming appropriate?</h2>
+
+<p>Almost everything.  Author says even email can be pair-programmed.</p>
+
+<h2>Can you pair program without talking with each other?</h2>
+
+<p>Really really hard w/o talking.</p>
+
+<h2>Tools for remote programming</h2>
+
+<ul>
+<li>voice communication.</li>
+<li>Share a screen.</li>
+</ul>
+
+
+<p>Google Hangout/Skype is not pairing.  Both need to be able to type on the same document at the same time.</p>
+
+<h2>What about disagreement?</h2>
+
+<p>Will get &ldquo;best&rdquo; LCD.  If still at odds, bring in a 3rd-party.  Still blocked: just take one.</p>
+
+<h2>Non-verbal queues?</h2>
+
+<p>important for switching driving/navigating without yanking someone out of there &ldquo;zone&rdquo;.</p>
+
+<h2>Remote pairing better because it has to be more formal?</h2>
+
+<p>Joe agrees; same physical environment can have numerous distractions as well.</p>
+
+<h2>What about pairing senior/junior?  Does that benefit the senior?</h2>
+
+<p>Yes.  (my experience also).  One benefit is that it gives the senior a chance to deeply review assumptions.</p>
+
+<h2>people who&rsquo;ve paired side-by-side, how much better is remote pairing?</h2>
+
+<p>Joe&rsquo;s questioning others on this reveals that it&rsquo;s about the same.</p>
+
+<h2>Do you ever just want to work by yourself?</h2>
+
+<p>Yes, sometimes you just want to work by yourself.  Really fun but not as productive.</p>
+
+<h2>What about 2 similar people pairing?  Almost of the same mind.</h2>
+
+<p>Extremely rare.  Diverse past experiences.</p>
+
+<h2>Different editor a problem?</h2>
+
+<p>goddamn Divorak!  Different editors and key mappings.  Good <a href="news:">news:</a> chance to learn a new editor.  Find the
+default common mappings between the difference editors.</p>
+
+<h2>Favorite Pairing Practices?</h2>
+
+<p>whatever works.  He likes every few minutes (2 to 10 minutes).  Ping-pong works to break keyboard hogging.
+Look for energy rythyms</p>
+
+<h2>Switching pair parters?</h2>
+
+<p>Yes, sometimes his company specifically assigns pairing.  Depends upon what kind of knowledge exchange the
+group would like to have happen.  Try to switch everyday.  If it goes for 3 days for a pair,
+good to break them up coz they are probably stuck.</p>
+
+<h2>Pair w/ non-programmer?</h2>
+
+<p>Great learning opportunity and chance to break down organization silos.</p>
+
+<h2>Full-time pairing of programmer/non-programmer?</h2>
+
+<p>get specific objectives done.</p>
+
+<h2>When should you NOT pair?</h2>
+
+<p>No specific tasks that he can think of.  But, you need to take breaks during the day.  Once in a while,
+should take a day for non-pairing to recharge.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[C Ruby]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-c-ruby/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-c-ruby</id>
+    <content type="html"><![CDATA[<p>Summary: getting to know how <strong>C</strong> is used in <strong>Ruby</strong> and the synergies between them:</p>
+
+<ul>
+<li>Understanding Ruby</li>
+<li>Speeding up Ruby</li>
+<li>Accessing non-Ruby libraries.</li>
+</ul>
+
+
+<!-- more -->
+
+
+<p>Details follow:</p>
+
+<h3>Understand Ruby</h3>
+
+<p>Some things you can only find out from reading the C code.</p>
+
+<h3>Speed Up Ruby</h3>
+
+<ul>
+<li>Rewrite parts of your code in C</li>
+<li>20x-50x speed gain.</li>
+</ul>
+
+
+<h3>C Extensions</h3>
+
+<h4>Ruby + C</h4>
+
+<p>Best of both worlds</p>
+
+<h3>Level 1 &mdash; build Ruby from scratch</h3>
+
+<p>ruby-2.0.0-p247 is stable</p>
+
+<p>Configure (Mac)</p>
+
+<p><code>bash
+$ brew install openssl
+$ autoconf
+$ ./configure --prefix= $HOME/myruby --with--opot-dir=/usr/l...
+</code>
+creates lots of output.</p>
+
+<p>compile and Build</p>
+
+<p><code>
+$ make
+</code></p>
+
+<p>Then check it</p>
+
+<p><code>
+$ make check
+</code></p>
+
+<p>Then install it</p>
+
+<p><code>
+$ make install
+</code></p>
+
+<p>Setup PATHSs</p>
+
+<ol>
+<li>Include your new ruby in <code>$PATH</code>.
+&hellip;</li>
+</ol>
+
+
+<p>Verify</p>
+
+<p><code>
+$ which ruby
+</code>
+&hellip;</p>
+
+<p>gem env</p>
+
+<p>Can check further by installing Rails</p>
+
+<p>Can even set up in RubyMine</p>
+
+<h3>Level 2 &ndash; Debugger</h3>
+
+<p>lldb &ndash; he showed how to use this debugger to see how you walk in C.</p>
+
+<p>Can use XCode lldb</p>
+
+<h4>Folder Structure</h4>
+
+<p><code>ext</code> and the root folder are the most interesting.</p>
+
+<h3>Level 4 &ndash; Hacking</h3>
+
+<h3>Epilog</h3>
+
+<ul>
+<li>ruby internals</li>
+<li>ruby metaprogramming</li>
+<li>ruby object model</li>
+</ul>
+
+
+<p>and the rest I didn&rsquo;t get.</p>
+]]></content>
+  </entry>
+  
+</feed>

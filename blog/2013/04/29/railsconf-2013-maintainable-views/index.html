@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Meetup - Agile Leader Storyline - Still Interested, Still Learning</title>
+  <title>Maintainable Views - Still Interested, Still Learning</title>
   <meta name="author" content="Scott (Old Fart Developer) Smith">
 
   
-  <meta name="description" content="Agile Leader Storyline (&ldquo;Your Life is a Movie&rdquo;) I attended a very interesting presentation by agile master Scott Dunn at the last
-Agile &hellip;">
+  <meta name="description" content="Maintainable Views">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Agile &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline">
+  <link rel="canonical" href="http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-maintainable-views">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Still Interested, Still Learning" type="application/atom+xml">
@@ -69,7 +68,7 @@ Agile &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Meetup - Agile Leader Storyline</h1>
+      <h1 class="entry-title">Maintainable Views</h1>
     
     
       <p class="meta">
@@ -85,92 +84,158 @@ Agile &hellip;">
   
 
 
-<time datetime="2014-02-22T16:05:38-08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+<time datetime="2013-04-29T00:00:00-07:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h2>Agile Leader Storyline (&ldquo;Your Life is a Movie&rdquo;)</h2>
+<div class="entry-content"><h2>Summary</h2>
 
-<p>I attended a very interesting presentation by agile master Scott Dunn at the last
-<a href="http://www.linkedin.com/groupItem?view=&amp;gid=1833155&amp;type=member&amp;item=5837424884862439427&amp;qid=fdcd7763-0ea9-41f5-85f0-191df40a657e&amp;goback=%2Egmp_1833155">Agile Socal meetup</a>
-about how &ldquo;living a better story&rdquo; can enhance your scrum master performance (or any part of your left, for that matter).</p>
+<ul>
+<li>Some suggestions for doing good software practices in view templates</li>
+</ul>
 
-<p><em>O No! Not another &lsquo;self-help&rsquo; experience!</em></p>
-
-<p>But, lo, I liked it!</p>
 
 <!-- more -->
 
 
-<h3>The Hook</h3>
-
-<p>Here&rsquo;s how Scott explained it:</p>
-
-<p>Exercise:</p>
-
-<ol>
-<li>Write down where you expect to be in 1 year.</li>
-<li>Write down where you expect to be in 5 years.  <em>been there, done that (yawn)</em></li>
-<li>Now, pretend your life is a script in a movie.  Now where do you expect to be?  <em>huh?</em></li>
-</ol>
-
-
-<h3><em>Okay, go on</em></h3>
-
-<p>Scott then asked us to answer the following question about movie plot lines:</p>
+<h3>Pros</h3>
 
 <ul>
-<li>Plot A: Introduced to the main character.  Thngs get better for him.  What&rsquo;s the main character like?</li>
-<li>Plot B: Introduced to the main character.  Bad shit happens to him and he has to deal with it.  What&rsquo;s the main
-character like afterwards?</li>
+<li>Contrasted conflicting needs of designers vs programmers.</li>
+<li>Good discussion of helpers vs partials vs presenters and where to use each.</li>
 </ul>
 
 
-<p>Scott pointed out that no one makes movies using plot A because it would be <em>boring</em>.  <em>(I suspect that&rsquo;s what
-travelogues are about.)</em></p>
-
-<p>Indeed, virtually all commercial movies deal with Plot B, because <strong>stories</strong> are all about how people change in the
-process of overcoming difficulty.</p>
-
-<p>I.e.:</p>
+<h3>Cons</h3>
 
 <ul>
-<li>Difficult: interesting</li>
-<li>Easy: boring</li>
+<li>Can&rsquo;t think of any</li>
 </ul>
 
 
-<p>Scott suggests that this applies to our own lives as well as movies.  <strong> <em>D&#8217;oh,
-except somehow this was a relevation, er, revelation to
-me.</em> </strong></p>
+<h2>Raw</h2>
 
-<p>Frankly, the rest of the presentation, while very good, simply filled in the ramifications,
-and references to the material he uses is in the links below.</p>
+<p>Assumption: already know how to write markup.</p>
 
-<p>At the end of his presentation, I thanked him.</p>
-
-<p>When I got home, I tore up my travelogue and am working on a script.  I&rsquo;ll let you know how it goes.</p>
-
-<h2>Links</h2>
-
-<h3>Agile Leader Storyline</h3>
+<p>Unmaintainable templates</p>
 
 <ul>
-<li><a href="http://www.storyline.conferences">http://www.storyline.conferences</a></li>
+<li>Markup repetition</li>
+<li>Logic in templates</li>
 </ul>
 
 
-<h3>For Scott Dunn</h3>
+<p>Markup Repetition</p>
 
 <ul>
-<li><a href="scott@rocketninesolutions.com">email</a></li>
-<li><a href="http://scottdunn.blogspot.com">blog</a></li>
-<li><a href="http://twitter.com/sdunnrocket9">twitter</a></li>
+<li>Good designer repeat tehmselves.</li>
+<li>Good programmers don&rsquo;t.</li>
 </ul>
 
+
+<p>Avoid markup repetition</p>
+
+<ul>
+<li>Abstract interface components.</li>
+<li>Use partials.</li>
+</ul>
+
+
+<p>Logic in templates</p>
+
+<ul>
+<li>Highly repetitive.</li>
+<li>Painful to test.</li>
+</ul>
+
+
+<h2>Problems with Helpers</h2>
+
+<ul>
+<li>Big projects end up with <em>tons</em>.</li>
+<li>Difficult to organize.</li>
+<li>Complex logic isn&rsquo;t well suited for them.</li>
+<li>Don&rsquo;t <em>feel</em> right.</li>
+</ul>
+
+
+<p>What presenter wants is decorator pattern.</p>
+
+<ul>
+<li>wraps a single object</li>
+<li>Transparent interface</li>
+<li>forwards methods to originla object</li>
+</ul>
+
+
+<p>In our case:</p>
+
+<ul>
+<li>Adds presentational logic to models without affecting the model itself.</li>
+</ul>
+
+
+<p>Implementing a Decorator.</p>
+
+<ul>
+<li>Uses a +method_missing* to forward object.</li>
+<li>He has a base decorator class.</li>
+<li>Whatever is used for a model goes into a single Decorator subclass for that model.</li>
+<li>In the view, the decorator looks like the original model object.</li>
+</ul>
+
+
+<p>Draper</p>
+
+<ul>
+<li>Access to the view context</li>
+<li>Easily decorate collections</li>
+<li>Prtends to be decorated object (helpful for +form_for+ and such)</li>
+<li>Easily decorate associations</li>
+</ul>
+
+
+<p>Complex views</p>
+
+<p>Unique and/or complex UI behavior will quickly outgrow helpers</p>
+
+<p>Uses Presentation Model</p>
+
+<p>The Presentation Model is of a self-contained class that represents all the data and behivor of the UIT window.</p>
+
+<p>Learning from JavaScript libraries</p>
+
+<ul>
+<li>Thanks, Backbone.</li>
+</ul>
+
+
+<p>So, presenter is passed</p>
+
+<ul>
+<li>template</li>
+<li>each model object needed.</li>
+</ul>
+
+
+<p>a <code>#to_s</code> method renders.</p>
+
+<p>Presenter likes to use a helper to create the presenter/view objects.</p>
+
+<p>This concept comes built-in with Rails. <code>form_for</code> which you can create a custom <code>FormBuilder</code> class.</p>
+
+<p>Final tips</p>
+
+<ul>
+<li>Use i18n</li>
+<li>Find gems to do this work for you (eg. simple_form, table_cloth)</li>
+</ul>
+
+
+<p>New project called <code>self</code> that is trying to solve a lot of these concerns.</p>
 </div>
 
 
@@ -193,12 +258,12 @@ and references to the material he uses is in the links below.</p>
   
 
 
-<time datetime="2014-02-22T16:05:38-08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+<time datetime="2013-04-29T00:00:00-07:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/agile/'>Agile</a>
+    <a class='category' href='/blog/categories/presentation/'>Presentation</a>
   
 </span>
 
@@ -207,7 +272,7 @@ and references to the material he uses is in the links below.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline/" data-via="_ofd" data-counturl="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-maintainable-views/" data-via="_ofd" data-counturl="http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-maintainable-views/" >Tweet</a>
   
   
   
@@ -216,8 +281,8 @@ and references to the material he uses is in the links below.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/02/09/la-rubyconf-writing-games-with-ruby/" title="Previous Post: Writing Games with Ruby">&laquo; Writing Games with Ruby</a>
       
+        <a class="basic-alignment right" href="/blog/2013/04/29/railsconf-2013-monday-dhh-keynote/" title="Next Post: DHH Keynote">DHH Keynote &raquo;</a>
       
     </p>
   </footer>

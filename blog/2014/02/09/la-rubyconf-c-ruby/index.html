@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Meetup - Agile Leader Storyline - Still Interested, Still Learning</title>
+  <title>C Ruby - Still Interested, Still Learning</title>
   <meta name="author" content="Scott (Old Fart Developer) Smith">
 
   
-  <meta name="description" content="Agile Leader Storyline (&ldquo;Your Life is a Movie&rdquo;) I attended a very interesting presentation by agile master Scott Dunn at the last
-Agile &hellip;">
+  <meta name="description" content="Why Working With Ruby and C Together Is Great">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Agile &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline">
+  <link rel="canonical" href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-c-ruby">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Still Interested, Still Learning" type="application/atom+xml">
@@ -69,7 +68,7 @@ Agile &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Meetup - Agile Leader Storyline</h1>
+      <h1 class="entry-title">C Ruby</h1>
     
     
       <p class="meta">
@@ -85,92 +84,128 @@ Agile &hellip;">
   
 
 
-<time datetime="2014-02-22T16:05:38-08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+<time datetime="2014-02-09T00:00:00-08:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h2>Agile Leader Storyline (&ldquo;Your Life is a Movie&rdquo;)</h2>
+<div class="entry-content"><p>Summary: getting to know how <strong>C</strong> is used in <strong>Ruby</strong> and the synergies between them:</p>
 
-<p>I attended a very interesting presentation by agile master Scott Dunn at the last
-<a href="http://www.linkedin.com/groupItem?view=&amp;gid=1833155&amp;type=member&amp;item=5837424884862439427&amp;qid=fdcd7763-0ea9-41f5-85f0-191df40a657e&amp;goback=%2Egmp_1833155">Agile Socal meetup</a>
-about how &ldquo;living a better story&rdquo; can enhance your scrum master performance (or any part of your left, for that matter).</p>
+<ul>
+<li>Understanding Ruby</li>
+<li>Speeding up Ruby</li>
+<li>Accessing non-Ruby libraries.</li>
+</ul>
 
-<p><em>O No! Not another &lsquo;self-help&rsquo; experience!</em></p>
-
-<p>But, lo, I liked it!</p>
 
 <!-- more -->
 
 
-<h3>The Hook</h3>
+<p>Details follow:</p>
 
-<p>Here&rsquo;s how Scott explained it:</p>
+<h3>Understand Ruby</h3>
 
-<p>Exercise:</p>
+<p>Some things you can only find out from reading the C code.</p>
+
+<h3>Speed Up Ruby</h3>
+
+<ul>
+<li>Rewrite parts of your code in C</li>
+<li>20x-50x speed gain.</li>
+</ul>
+
+
+<h3>C Extensions</h3>
+
+<h4>Ruby + C</h4>
+
+<p>Best of both worlds</p>
+
+<h3>Level 1 &mdash; build Ruby from scratch</h3>
+
+<p>ruby-2.0.0-p247 is stable</p>
+
+<p>Configure (Mac)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>brew install openssl
+</span><span class='line'><span class="nv">$ </span>autoconf
+</span><span class='line'><span class="nv">$ </span>./configure --prefix<span class="o">=</span> <span class="nv">$HOME</span>/myruby --with--opot-dir<span class="o">=</span>/usr/l...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>creates lots of output.</p>
+
+<p>compile and Build</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>make
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then check it</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>make check
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then install it</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>make install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Setup PATHSs</p>
 
 <ol>
-<li>Write down where you expect to be in 1 year.</li>
-<li>Write down where you expect to be in 5 years.  <em>been there, done that (yawn)</em></li>
-<li>Now, pretend your life is a script in a movie.  Now where do you expect to be?  <em>huh?</em></li>
+<li>Include your new ruby in <code>$PATH</code>.
+&hellip;</li>
 </ol>
 
 
-<h3><em>Okay, go on</em></h3>
+<p>Verify</p>
 
-<p>Scott then asked us to answer the following question about movie plot lines:</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>which ruby
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>&hellip;</p>
+
+<p>gem env</p>
+
+<p>Can check further by installing Rails</p>
+
+<p>Can even set up in RubyMine</p>
+
+<h3>Level 2 &ndash; Debugger</h3>
+
+<p>lldb &ndash; he showed how to use this debugger to see how you walk in C.</p>
+
+<p>Can use XCode lldb</p>
+
+<h4>Folder Structure</h4>
+
+<p><code>ext</code> and the root folder are the most interesting.</p>
+
+<h3>Level 4 &ndash; Hacking</h3>
+
+<h3>Epilog</h3>
 
 <ul>
-<li>Plot A: Introduced to the main character.  Thngs get better for him.  What&rsquo;s the main character like?</li>
-<li>Plot B: Introduced to the main character.  Bad shit happens to him and he has to deal with it.  What&rsquo;s the main
-character like afterwards?</li>
+<li>ruby internals</li>
+<li>ruby metaprogramming</li>
+<li>ruby object model</li>
 </ul>
 
 
-<p>Scott pointed out that no one makes movies using plot A because it would be <em>boring</em>.  <em>(I suspect that&rsquo;s what
-travelogues are about.)</em></p>
-
-<p>Indeed, virtually all commercial movies deal with Plot B, because <strong>stories</strong> are all about how people change in the
-process of overcoming difficulty.</p>
-
-<p>I.e.:</p>
-
-<ul>
-<li>Difficult: interesting</li>
-<li>Easy: boring</li>
-</ul>
-
-
-<p>Scott suggests that this applies to our own lives as well as movies.  <strong> <em>D&#8217;oh,
-except somehow this was a relevation, er, revelation to
-me.</em> </strong></p>
-
-<p>Frankly, the rest of the presentation, while very good, simply filled in the ramifications,
-and references to the material he uses is in the links below.</p>
-
-<p>At the end of his presentation, I thanked him.</p>
-
-<p>When I got home, I tore up my travelogue and am working on a script.  I&rsquo;ll let you know how it goes.</p>
-
-<h2>Links</h2>
-
-<h3>Agile Leader Storyline</h3>
-
-<ul>
-<li><a href="http://www.storyline.conferences">http://www.storyline.conferences</a></li>
-</ul>
-
-
-<h3>For Scott Dunn</h3>
-
-<ul>
-<li><a href="scott@rocketninesolutions.com">email</a></li>
-<li><a href="http://scottdunn.blogspot.com">blog</a></li>
-<li><a href="http://twitter.com/sdunnrocket9">twitter</a></li>
-</ul>
-
+<p>and the rest I didn&rsquo;t get.</p>
 </div>
 
 
@@ -193,12 +228,12 @@ and references to the material he uses is in the links below.</p>
   
 
 
-<time datetime="2014-02-22T16:05:38-08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+<time datetime="2014-02-09T00:00:00-08:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/agile/'>Agile</a>
+    <a class='category' href='/blog/categories/presentation/'>Presentation</a>
   
 </span>
 
@@ -207,7 +242,7 @@ and references to the material he uses is in the links below.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline/" data-via="_ofd" data-counturl="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-c-ruby/" data-via="_ofd" data-counturl="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-c-ruby/" >Tweet</a>
   
   
   
@@ -216,8 +251,10 @@ and references to the material he uses is in the links below.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/02/09/la-rubyconf-writing-games-with-ruby/" title="Previous Post: Writing Games with Ruby">&laquo; Writing Games with Ruby</a>
+        <a class="basic-alignment left" href="/blog/2014/02/09/la-rubyconf-addressing-sexism/" title="Previous Post: Addressing Sexism">&laquo; Addressing Sexism</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2014/02/09/la-rubyconf-overview/" title="Next Post: My notes on LA RubyConf 2014">My notes on LA RubyConf 2014 &raquo;</a>
       
     </p>
   </footer>

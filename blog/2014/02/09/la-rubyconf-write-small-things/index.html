@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Meetup - Agile Leader Storyline - Still Interested, Still Learning</title>
+  <title>Writing Small Things - Still Interested, Still Learning</title>
   <meta name="author" content="Scott (Old Fart Developer) Smith">
 
   
-  <meta name="description" content="Agile Leader Storyline (&ldquo;Your Life is a Movie&rdquo;) I attended a very interesting presentation by agile master Scott Dunn at the last
-Agile &hellip;">
+  <meta name="description" content="Using Refactoring Techniques to Improve Code and Maintainability">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Agile &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline">
+  <link rel="canonical" href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-write-small-things">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Still Interested, Still Learning" type="application/atom+xml">
@@ -69,7 +68,7 @@ Agile &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Meetup - Agile Leader Storyline</h1>
+      <h1 class="entry-title">Writing Small Things</h1>
     
     
       <p class="meta">
@@ -85,92 +84,101 @@ Agile &hellip;">
   
 
 
-<time datetime="2014-02-22T16:05:38-08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+<time datetime="2014-02-09T00:00:00-08:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h2>Agile Leader Storyline (&ldquo;Your Life is a Movie&rdquo;)</h2>
+<div class="entry-content"><h2>Small Code</h2>
 
-<p>I attended a very interesting presentation by agile master Scott Dunn at the last
-<a href="http://www.linkedin.com/groupItem?view=&amp;gid=1833155&amp;type=member&amp;item=5837424884862439427&amp;qid=fdcd7763-0ea9-41f5-85f0-191df40a657e&amp;goback=%2Egmp_1833155">Agile Socal meetup</a>
-about how &ldquo;living a better story&rdquo; can enhance your scrum master performance (or any part of your left, for that matter).</p>
+<ul>
+<li>Not about less code.</li>
+<li>Rather it&rsquo;s about organizing the code into smaller classes and smaller methods.</li>
+<li>Don&rsquo;t start with it; refactor towards it.</li>
+</ul>
 
-<p><em>O No! Not another &lsquo;self-help&rsquo; experience!</em></p>
 
-<p>But, lo, I liked it!</p>
+<p>Why?</p>
 
 <!-- more -->
 
 
-<h3>The Hook</h3>
-
-<p>Here&rsquo;s how Scott explained it:</p>
-
-<p>Exercise:</p>
-
-<ol>
-<li>Write down where you expect to be in 1 year.</li>
-<li>Write down where you expect to be in 5 years.  <em>been there, done that (yawn)</em></li>
-<li>Now, pretend your life is a script in a movie.  Now where do you expect to be?  <em>huh?</em></li>
-</ol>
-
-
-<h3><em>Okay, go on</em></h3>
-
-<p>Scott then asked us to answer the following question about movie plot lines:</p>
-
 <ul>
-<li>Plot A: Introduced to the main character.  Thngs get better for him.  What&rsquo;s the main character like?</li>
-<li>Plot B: Introduced to the main character.  Bad shit happens to him and he has to deal with it.  What&rsquo;s the main
-character like afterwards?</li>
+<li>We don&rsquo;t know the future</li>
+<li>Raise the level of abstraction</li>
+<li>Create composable components</li>
+<li>Prefer delegation over inheritance.</li>
 </ul>
 
 
-<p>Scott pointed out that no one makes movies using plot A because it would be <em>boring</em>.  <em>(I suspect that&rsquo;s what
-travelogues are about.)</em></p>
+<p>all so you can enable future change.</p>
 
-<p>Indeed, virtually all commercial movies deal with Plot B, because <strong>stories</strong> are all about how people change in the
-process of overcoming difficulty.</p>
-
-<p>I.e.:</p>
+<p>Challenges of small code:</p>
 
 <ul>
-<li>Difficult: interesting</li>
-<li>Easy: boring</li>
+<li>Dependency Management</li>
+<li>Context Management</li>
 </ul>
 
 
-<p>Scott suggests that this applies to our own lives as well as movies.  <strong> <em>D&#8217;oh,
-except somehow this was a relevation, er, revelation to
-me.</em> </strong></p>
-
-<p>Frankly, the rest of the presentation, while very good, simply filled in the ramifications,
-and references to the material he uses is in the links below.</p>
-
-<p>At the end of his presentation, I thanked him.</p>
-
-<p>When I got home, I tore up my travelogue and am working on a script.  I&rsquo;ll let you know how it goes.</p>
-
-<h2>Links</h2>
-
-<h3>Agile Leader Storyline</h3>
+<p>Main Tools</p>
 
 <ul>
-<li><a href="http://www.storyline.conferences">http://www.storyline.conferences</a></li>
+<li>extract method</li>
+<li>extract class</li>
+<li>composed method</li>
 </ul>
 
 
-<h3>For Scott Dunn</h3>
+<p>Screensize is good size constraint.</p>
+
+<p>Minimize number of arguments.</p>
+
+<h1>Methods</h1>
+
+<p>&ldquo;The object programs that live best and longest are those with short methods.&rdquo;</p>
+
+<p>-Refactoring by Fields, Harvey, Fowler, Black</p>
+
+<h2>The first rule of methods</h2>
+
+<p>Do one thing.  Do it well.  Do only that thing. (don&rsquo;t have side effects)</p>
+
+<p>Use descriptive Names</p>
+
+<p>The fewer arguments, the better.  (constructor can take option hash)</p>
+
+<p>Separate Queries from Commands</p>
+
+<p>Don&rsquo;t repeat yourself.</p>
+
+<h2>let&rsquo;s Build aCommand Line Option Library</h2>
+
+<p>How do we isolate abstractions?</p>
 
 <ul>
-<li><a href="scott@rocketninesolutions.com">email</a></li>
-<li><a href="http://scottdunn.blogspot.com">blog</a></li>
-<li><a href="http://twitter.com/sdunnrocket9">twitter</a></li>
+<li>Separate the &ldquo;what&rdquo; from the &ldquo;how&rdquo;</li>
 </ul>
 
+
+<h1>Miscellaneous</h1>
+
+<p>presentation will be available on his SlideShare account soon.</p>
+
+<h1>Presenter</h1>
+
+<p>Mark runs Enable Labs, consulting</p>
+
+<p>Mark Menard</p>
+
+<p>@mark_menard</p>
+
+<p>Ruby for about 5 years</p>
+
+<p>&lsquo;The great thing about writing shitty code that &ldquo;just works,&rdquo; is that it is too risky and too expensive to change,
+so it just lives forever.&rsquo;</p>
 </div>
 
 
@@ -193,12 +201,12 @@ and references to the material he uses is in the links below.</p>
   
 
 
-<time datetime="2014-02-22T16:05:38-08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+<time datetime="2014-02-09T00:00:00-08:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/agile/'>Agile</a>
+    <a class='category' href='/blog/categories/presentation/'>Presentation</a>
   
 </span>
 
@@ -207,7 +215,7 @@ and references to the material he uses is in the links below.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline/" data-via="_ofd" data-counturl="http://oldfartdeveloper.github.io/blog/2014/02/22/meetup-agile-leader-storyline/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-write-small-things/" data-via="_ofd" data-counturl="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-write-small-things/" >Tweet</a>
   
   
   
@@ -216,8 +224,10 @@ and references to the material he uses is in the links below.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/02/09/la-rubyconf-writing-games-with-ruby/" title="Previous Post: Writing Games with Ruby">&laquo; Writing Games with Ruby</a>
+        <a class="basic-alignment left" href="/blog/2014/02/09/la-rubyconf-tdd-and-solid-design/" title="Previous Post: TDD and SOLID Design">&laquo; TDD and SOLID Design</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2014/02/09/la-rubyconf-writing-games-with-ruby/" title="Next Post: Writing Games with Ruby">Writing Games with Ruby &raquo;</a>
       
     </p>
   </footer>

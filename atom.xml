@@ -4,7 +4,7 @@
   <title><![CDATA[Still Interested, Still Learning]]></title>
   <link href="http://oldfartdeveloper.github.io/atom.xml" rel="self"/>
   <link href="http://oldfartdeveloper.github.io/"/>
-  <updated>2014-02-22T16:17:04-08:00</updated>
+  <updated>2014-02-22T16:42:31-08:00</updated>
   <id>http://oldfartdeveloper.github.io/</id>
   <author>
     <name><![CDATA[Scott (Old Fart Developer) Smith]]></name>
@@ -27,6 +27,9 @@ about how &ldquo;living a better story&rdquo; can enhance your scrum master perf
 <p><em>O No! Not another &lsquo;self-help&rsquo; experience!</em></p>
 
 <p>But, lo, I liked it!</p>
+
+<!-- more -->
+
 
 <h3>The Hook</h3>
 
@@ -94,6 +97,1436 @@ and references to the material he uses is in the links below.</p>
 <li><a href="http://twitter.com/sdunnrocket9">twitter</a></li>
 </ul>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Writing Games With Ruby]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-writing-games-with-ruby/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-writing-games-with-ruby</id>
+    <content type="html"><![CDATA[<p>Confession: writing games is FUN!</p>
+
+<p>Because: Ruby!</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install gosu</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Gosu &ndash; Game Library</h1>
+
+<p>2D game development library for the Ruby and C++ programming languages.</p>
+
+<h1>Game Loop</h1>
+
+<p>In a loop it calls</p>
+
+<ul>
+<li>update</li>
+<li>draw</li>
+<li>button down</li>
+<li>button up</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Writing Small Things]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-write-small-things/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-write-small-things</id>
+    <content type="html"><![CDATA[<h2>Small Code</h2>
+
+<ul>
+<li>Not about less code.</li>
+<li>Rather it&rsquo;s about organizing the code into smaller classes and smaller methods.</li>
+<li>Don&rsquo;t start with it; refactor towards it.</li>
+</ul>
+
+
+<p>Why?</p>
+
+<!-- more -->
+
+
+<ul>
+<li>We don&rsquo;t know the future</li>
+<li>Raise the level of abstraction</li>
+<li>Create composable components</li>
+<li>Prefer delegation over inheritance.</li>
+</ul>
+
+
+<p>all so you can enable future change.</p>
+
+<p>Challenges of small code:</p>
+
+<ul>
+<li>Dependency Management</li>
+<li>Context Management</li>
+</ul>
+
+
+<p>Main Tools</p>
+
+<ul>
+<li>extract method</li>
+<li>extract class</li>
+<li>composed method</li>
+</ul>
+
+
+<p>Screensize is good size constraint.</p>
+
+<p>Minimize number of arguments.</p>
+
+<h1>Methods</h1>
+
+<p>&ldquo;The object programs that live best and longest are those with short methods.&rdquo;</p>
+
+<p>-Refactoring by Fields, Harvey, Fowler, Black</p>
+
+<h2>The first rule of methods</h2>
+
+<p>Do one thing.  Do it well.  Do only that thing. (don&rsquo;t have side effects)</p>
+
+<p>Use descriptive Names</p>
+
+<p>The fewer arguments, the better.  (constructor can take option hash)</p>
+
+<p>Separate Queries from Commands</p>
+
+<p>Don&rsquo;t repeat yourself.</p>
+
+<h2>let&rsquo;s Build aCommand Line Option Library</h2>
+
+<p>How do we isolate abstractions?</p>
+
+<ul>
+<li>Separate the &ldquo;what&rdquo; from the &ldquo;how&rdquo;</li>
+</ul>
+
+
+<h1>Miscellaneous</h1>
+
+<p>presentation will be available on his SlideShare account soon.</p>
+
+<h1>Presenter</h1>
+
+<p>Mark runs Enable Labs, consulting</p>
+
+<p>Mark Menard</p>
+
+<p>@mark_menard</p>
+
+<p>Ruby for about 5 years</p>
+
+<p>&lsquo;The great thing about writing shitty code that &ldquo;just works,&rdquo; is that it is too risky and too expensive to change,
+so it just lives forever.&rsquo;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TDD and SOLID Design]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-tdd-and-solid-design/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-tdd-and-solid-design</id>
+    <content type="html"><![CDATA[<p>Intention of SOLID principle is to make better code and more testable code.  Here&rsquo;s how.</p>
+
+<!-- more -->
+
+
+<h2>Wishful Testing</h2>
+
+<p>In a shipping class example,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">Shipping</span><span class="p">:</span><span class="ss">:Rate</span><span class="o">.</span><span class="n">stub</span><span class="p">(</span><span class="ss">:new</span><span class="p">)</span><span class="o">.</span><span class="n">with</span><span class="p">(</span>
+</span><span class='line'><span class="n">order</span><span class="o">.</span><span class="n">stub</span><span class="p">(</span><span class="n">non_digital_items</span><span class="p">)</span><span class="o">.</span><span class="n">and_return</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now these can be wrapped by methods.</p>
+
+<h2>Liskoff Substitution Principle</h2>
+
+<p>Derived classes must be substitutable for their base classes</p>
+
+<p>Contract Test</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">it_should_behave_like</span> <span class="s2">&quot;s shipping method&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Dependency inversion</li>
+<li>Open Closed</li>
+<li>Interface Segregation</li>
+</ul>
+
+
+<h2>Summary</h2>
+
+<blockquote><p>&ldquo;I&rsquo;m not a great programmer; I&rsquo;m just a good programmer with great habits&rdquo;  &mdash;Kent Beck</p></blockquote>
+
+<p>SOLID principles help you acquire great habits. @sebasoga</p>
+
+<p>Question: Any of these principles good for testing ActiveRecord models?</p>
+
+<p>Answer: Only have your model info specific to database (scopes, etc).
+Business logic put into different classes.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I Have Pair Programmed for 27,000 Hours: Ask Me Anything!]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-pair-programming/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-pair-programming</id>
+    <content type="html"><![CDATA[<p>Notes I took during this Q/A presentation at <a href="http://larubyconf.com/schedule">LA RubyConf 2014</a>.</p>
+
+<p><strong>Takeaway:</strong> Good reminder of how important pair programming is, and why I should &ldquo;not shirk&rdquo; it as much as I do.</p>
+
+<p>Presenter: Joe Moore</p>
+
+<!-- more -->
+
+
+<p><a href="https://twitter.com/joem">@joem</a> &ndash; <a href="http://remotepairprogramming.com">remoteprogramming.com</a></p>
+
+<h2>How do you get over being nervous?</h2>
+
+<p>Pair a lot.</p>
+
+<h2>What is pair programming in general?</h2>
+
+<p>2 people working together on the same computer.</p>
+
+<h2>When is pair programming appropriate?</h2>
+
+<p>Almost everything.  Author says even email can be pair-programmed.</p>
+
+<h2>Can you pair program without talking with each other?</h2>
+
+<p>Really really hard w/o talking.</p>
+
+<h2>Tools for remote programming</h2>
+
+<ul>
+<li>voice communication.</li>
+<li>Share a screen.</li>
+</ul>
+
+
+<p>Google Hangout/Skype is not pairing.  Both need to be able to type on the same document at the same time.</p>
+
+<h2>What about disagreement?</h2>
+
+<p>Will get &ldquo;best&rdquo; LCD.  If still at odds, bring in a 3rd-party.  Still blocked: just take one.</p>
+
+<h2>Non-verbal queues?</h2>
+
+<p>important for switching driving/navigating without yanking someone out of there &ldquo;zone&rdquo;.</p>
+
+<h2>Remote pairing better because it has to be more formal?</h2>
+
+<p>Joe agrees; same physical environment can have numerous distractions as well.</p>
+
+<h2>What about pairing senior/junior?  Does that benefit the senior?</h2>
+
+<p>Yes.  (my experience also).  One benefit is that it gives the senior a chance to deeply review assumptions.</p>
+
+<h2>people who&rsquo;ve paired side-by-side, how much better is remote pairing?</h2>
+
+<p>Joe&rsquo;s questioning others on this reveals that it&rsquo;s about the same.</p>
+
+<h2>Do you ever just want to work by yourself?</h2>
+
+<p>Yes, sometimes you just want to work by yourself.  Really fun but not as productive.</p>
+
+<h2>What about 2 similar people pairing?  Almost of the same mind.</h2>
+
+<p>Extremely rare.  Diverse past experiences.</p>
+
+<h2>Different editor a problem?</h2>
+
+<p>goddamn Divorak!  Different editors and key mappings.  Good <a href="news:">news:</a> chance to learn a new editor.  Find the
+default common mappings between the difference editors.</p>
+
+<h2>Favorite Pairing Practices?</h2>
+
+<p>whatever works.  He likes every few minutes (2 to 10 minutes).  Ping-pong works to break keyboard hogging.
+Look for energy rythyms</p>
+
+<h2>Switching pair parters?</h2>
+
+<p>Yes, sometimes his company specifically assigns pairing.  Depends upon what kind of knowledge exchange the
+group would like to have happen.  Try to switch everyday.  If it goes for 3 days for a pair,
+good to break them up coz they are probably stuck.</p>
+
+<h2>Pair w/ non-programmer?</h2>
+
+<p>Great learning opportunity and chance to break down organization silos.</p>
+
+<h2>Full-time pairing of programmer/non-programmer?</h2>
+
+<p>get specific objectives done.</p>
+
+<h2>When should you NOT pair?</h2>
+
+<p>No specific tasks that he can think of.  But, you need to take breaks during the day.  Once in a while,
+should take a day for non-pairing to recharge.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Notes on LA RubyConf 2014]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-overview/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-overview</id>
+    <content type="html"><![CDATA[<h1>Introduction</h1>
+
+<p>I was fortunate enough to attend LA RubyConf 2014:</p>
+
+<ul>
+<li>Drove my Spark EV to a charging station close to the hotel in Burbank and paid for charging rather than parking.</li>
+<li>Good to see familiar faces.</li>
+<li>Sessions were as good this year as the previous ones.</li>
+</ul>
+
+
+<p>I only took detailed notes on one presentation, the
+<a href="http://oldfartdeveloper.github.io/presentation/2014/02/09/la-rubyconf-pair-programming/">Pair Programming</a> session by Joe Moore.</p>
+
+<p>Otherwise, my notes on the rest of the 1-day conference are here.</p>
+
+<!-- more -->
+
+
+<h1>The Presentations</h1>
+
+<h2>As Easy As Rails</h2>
+
+<p>Justin Searls</p>
+
+<p>@searls</p>
+
+<p>works for Test Double</p>
+
+<p>Say <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#58;&#x68;&#x65;&#x6c;&#x6c;&#x6f;&#x40;&#x74;&#x65;&#115;&#x74;&#x64;&#x6f;&#x75;&#98;&#x6c;&#101;&#x2e;&#99;&#x6f;&#x6d;">&#104;&#101;&#x6c;&#x6c;&#x6f;&#64;&#x74;&#x65;&#115;&#x74;&#x64;&#x6f;&#117;&#98;&#108;&#x65;&#46;&#x63;&#x6f;&#109;</a></p>
+
+<p>Slides: <a href="https://speakerdeck.com/searls/as-easy-as-rails">As Easy As Rails</a>.
+Fast moving talk on the risk of trying to do
+everything in Rails when functionality is moving to the client-side.  Great presentation.</p>
+
+<h2>Addressing Sexism</h2>
+
+<p>Summary: thoughtful talk.</p>
+
+<p>More notes <a href="http://oldfartdeveloper.github.io/presentation/2014/02/09/la-rubyconf-addressing-sexism/">here</a>.</p>
+
+<h2>C Ruby</h2>
+
+<p>Summary: <a href="http://oldfartdeveloper.github.io/presentation/2014/02/09/la-rubyconf-c-ruby/">persuasive presentation</a>
+of the synergy between <strong>Ruby</strong> and <strong>C</strong>.</p>
+
+<h2>Writing Games with Ruby</h2>
+
+<p>Presenter&rsquo;s confession: writing games if FUN!  <em>My confession: Looks much easier than I thought it would.</em></p>
+
+<p>Because: Ruby!</p>
+
+<p>My further notes <a href="http://oldfartdeveloper.github.io/presentation/2014/02/09/la-rubyconf-writing-games-with-ruby/">here</a>.</p>
+
+<h2>TDD and SOLID Design</h2>
+
+<p>My understanding grew of how a working knowledge of SOLID can really make your TDD coding easier, faster to develop,
+and easier to change.</p>
+
+<p>Great <a href="http://oldfartdeveloper.github.io/presentation/2014/02/09/la-rubyconf-tdd-and-solid-design/">presentation</a>.</p>
+
+<h2>Write Small Things</h2>
+
+<p><em>Summary: Keep your methods and classes small for most maintainable code.</em></p>
+
+<p>Since I already try to do this,
+it was interesting and useful to find some
+<a href="http://oldfartdeveloper.github.io/presentation/2014/02/09/la-rubyconf-write-small-things/">specific techniques and justifications</a>.</p>
+
+<h2>Go(lang) for the Rubyist</h2>
+
+<p>The one presentation I missed; here&rsquo;s his presentation: <a href="http://www.slideshare.net/markykang/golang-for-the-rubyist?utm_content=buffer5f0c8&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer">Go(lang) for the Rubyist</a>.  I had to leave early for another commitment; dang it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[C Ruby]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-c-ruby/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-c-ruby</id>
+    <content type="html"><![CDATA[<p>Summary: getting to know how <strong>C</strong> is used in <strong>Ruby</strong> and the synergies between them:</p>
+
+<ul>
+<li>Understanding Ruby</li>
+<li>Speeding up Ruby</li>
+<li>Accessing non-Ruby libraries.</li>
+</ul>
+
+
+<!-- more -->
+
+
+<p>Details follow:</p>
+
+<h3>Understand Ruby</h3>
+
+<p>Some things you can only find out from reading the C code.</p>
+
+<h3>Speed Up Ruby</h3>
+
+<ul>
+<li>Rewrite parts of your code in C</li>
+<li>20x-50x speed gain.</li>
+</ul>
+
+
+<h3>C Extensions</h3>
+
+<h4>Ruby + C</h4>
+
+<p>Best of both worlds</p>
+
+<h3>Level 1 &mdash; build Ruby from scratch</h3>
+
+<p>ruby-2.0.0-p247 is stable</p>
+
+<p>Configure (Mac)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>brew install openssl
+</span><span class='line'><span class="nv">$ </span>autoconf
+</span><span class='line'><span class="nv">$ </span>./configure --prefix<span class="o">=</span> <span class="nv">$HOME</span>/myruby --with--opot-dir<span class="o">=</span>/usr/l...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>creates lots of output.</p>
+
+<p>compile and Build</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>make
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then check it</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>make check
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then install it</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>make install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Setup PATHSs</p>
+
+<ol>
+<li>Include your new ruby in <code>$PATH</code>.
+&hellip;</li>
+</ol>
+
+
+<p>Verify</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>which ruby
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>&hellip;</p>
+
+<p>gem env</p>
+
+<p>Can check further by installing Rails</p>
+
+<p>Can even set up in RubyMine</p>
+
+<h3>Level 2 &ndash; Debugger</h3>
+
+<p>lldb &ndash; he showed how to use this debugger to see how you walk in C.</p>
+
+<p>Can use XCode lldb</p>
+
+<h4>Folder Structure</h4>
+
+<p><code>ext</code> and the root folder are the most interesting.</p>
+
+<h3>Level 4 &ndash; Hacking</h3>
+
+<h3>Epilog</h3>
+
+<ul>
+<li>ruby internals</li>
+<li>ruby metaprogramming</li>
+<li>ruby object model</li>
+</ul>
+
+
+<p>and the rest I didn&rsquo;t get.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Addressing Sexism]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-addressing-sexism/"/>
+    <updated>2014-02-09T00:00:00-08:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2014/02/09/la-rubyconf-addressing-sexism</id>
+    <content type="html"><![CDATA[<p><em>Takeaway: Thoughtful presentation on sexism in the programming community and the challenges in addressing it.</em></p>
+
+<!-- more -->
+
+
+<h1>Why Address This Now?</h1>
+
+<p>to build a better Ruby community</p>
+
+<h1>Presenters:</h1>
+
+<p>Hanna Howard @techgirlwonder</p>
+
+<p>Evan Dorn @IdahoEv</p>
+
+<p>Logical Reality Design</p>
+
+<p>Gender in Technology</p>
+
+<p>railsgirls.com/la</p>
+
+<p>Men defensive:</p>
+
+<h1>1 Binary (guiltfree via guilty)</h1>
+
+<p>Objection: Not all MEN are like that!</p>
+
+<p>Why are we defensive?  Want world to be binary (good guys vs bad guys)  In reality, it&rsquo;s a spectrum.</p>
+
+<p>So you don&rsquo;t need to say it.  Everyone knows already. Seriously, everyone knows.  It&rsquo;s changing the subject.  It&rsquo;s
+your fear of being thought of as bad guys.</p>
+
+<h1>2 Unwanted sexual attention</h1>
+
+<p>It&rsquo;s a compliment, you should be flattered.
+You&rsquo;re overreacting.
+etc.</p>
+
+<p>Don&rsquo;t tell Someone Else How They Should Feel.  Your point of view is natural but toally irrelevant to their feelings.</p>
+
+<h1>3 How am I supposed to respond?</h1>
+
+<p>Option: don&rsquo;t say anything; just listen.  Listen to your own feelings of response.</p>
+
+<h1>4 I&rsquo;m a nerd, people picked on me my whole life.</h1>
+
+<p>&ldquo;I can&rsquo;t oppress other people, because I&rsquo;m the one that got stomped on.&rdquo;</p>
+
+<p>Binary thinking: 1 ton oppressors vs others.</p>
+
+<p>Many axis of polarization</p>
+
+<h1>5 &ldquo;Women evolved for multitasking and compassion, men evolved to solve specific problems&rdquo;</h1>
+
+<p>&ldquo;That makes men better programmers&rdquo;</p>
+
+<p>Because programming and hunting big game with spears have just so much in common.</p>
+
+<p>Don&rsquo;t use evolution as a holy book.</p>
+
+<h1>6 IF we always assume victims are telling the truth we will destroy careers and lives over false accusations&hellip;&#8221;</h1>
+
+<p>Natural fear: This just doesn&rsquo;t happen.  Women are reasonable people, too.</p>
+
+<p>Making it about you, and doubting them, is hurtful.</p>
+
+<p>It values the abuser&rsquo;s career &amp; life over the victim&rsquo;s.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ember SC Flow Feeds]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-flow-feeds/"/>
+    <updated>2013-05-21T00:00:00-07:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-flow-feeds</id>
+    <content type="html"><![CDATA[<p>Speaker: Ben (<a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#98;&#101;&#x6e;&#x40;&#x6e;&#101;&#114;&#x64;&#121;&#119;&#111;&#x72;&#x6d;&#46;&#x63;&#x6f;&#x6d;">&#98;&#x65;&#x6e;&#x40;&#x6e;&#x65;&#x72;&#100;&#121;&#119;&#x6f;&#114;&#109;&#x2e;&#x63;&#111;&#109;</a>)</p>
+
+<h1>What?</h1>
+
+<p>A video player implemented in Ember.</p>
+
+<!-- more -->
+
+
+<h1>Why?</h1>
+
+<ul>
+<li>Too many RSS feeds :(</li>
+<li>Video Playlists</li>
+<li>New music everyday</li>
+</ul>
+
+
+<p>Wanted to create an Ember demo app.</p>
+
+<h1>flowfeeds.com</h1>
+
+<ul>
+<li>Stack
+
+<ul>
+<li>Ember.js &amp; Rails 4</li>
+</ul>
+</li>
+<li>Features</li>
+</ul>
+
+
+<h1>Audio &amp; Vdeo</h1>
+
+<ul>
+<li>LIbraries
+
+<ul>
+<li>Video. YouTube JSAPI</li>
+<li>Audio: SoundManager2</li>
+</ul>
+</li>
+</ul>
+
+
+<p>The two APIs are completely different</p>
+
+<p>Author uses a facade called a PlayableController</p>
+
+<p>Is using <code>Ember.K</code> to set up abstract method that the two &ldquo;real&rdquo; controllers subclass and implement.</p>
+
+<p>Source: github.com/nerdyworm/flowfeeds
+contact: <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#98;&#101;&#x6e;&#64;&#x6e;&#x65;&#x72;&#x64;&#121;&#119;&#111;&#x72;&#x6d;&#46;&#x63;&#111;&#109;">&#98;&#101;&#110;&#64;&#x6e;&#101;&#114;&#x64;&#x79;&#x77;&#x6f;&#x72;&#109;&#x2e;&#x63;&#111;&#x6d;</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ember SC Backburner.js and the Ember Run Loop]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-erik-bryn-backburnerjs-and-the-ember-run-loop/"/>
+    <updated>2013-05-21T00:00:00-07:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-erik-bryn-backburnerjs-and-the-ember-run-loop</id>
+    <content type="html"><![CDATA[<p>Speaker: Eryk Bryn</p>
+
+<h2>Summary</h2>
+
+<p>How Ember JS&rsquo;s &lsquo;run loop&rsquo; works.</p>
+
+<!-- more -->
+
+
+<h2>Pretalk</h2>
+
+<p>Erik Talked about his history w/ Ember.  He was a Rails developer that was doing more and more Javascript work.</p>
+
+<p>Was sold on Yehuda&rsquo;s talk about templates.</p>
+
+<h3>The Great Divide</h3>
+
+<p>Do you do all Javascript instead of HTML?  SproutCore did this.</p>
+
+<p>But EmberJS leverages HTML, which is becoming more powerful.</p>
+
+<p>Javascript is powerful enough to make web applications like native applications.</p>
+
+<p>Serious Javascript development with Ember; feels fortunate.</p>
+
+<h1>Talk</h1>
+
+<h2>Backburner.js</h2>
+
+<p>Is a micro-library that now is the Ember Run Loop.</p>
+
+<h2>What Does the Runloop Do?</h2>
+
+<p>It&rsquo;s a queue.</p>
+
+<p>Erik: all about coalescing.  Keeps the DOM from being updated unnecessarily.</p>
+
+<p>Ember hides BackBurner from you.</p>
+
+<p>Run loop is a set of queues:</p>
+
+<ul>
+<li>sync</li>
+<li>Actions</li>
+<li>render</li>
+<li>afterRender</li>
+<li>destroy</li>
+</ul>
+
+
+<p>Libraries can add their own queues</p>
+
+<h3>Sync</h3>
+
+<p>Is for synchronizing bindings.</p>
+
+<p>2 kinds of bindings (didn&rsquo;t get the details).</p>
+
+<h3>Actions</h3>
+
+<p>All the deferred actions get put here.</p>
+
+<h3>Render and AfterRender</h3>
+
+<p>Here&rsquo;s where the DOM is manipulated.</p>
+
+<p>The afterRender queue is where you schedule activities after Ember has manipulated the DOM.</p>
+
+<h3>Destroy</h3>
+
+<p>Where objects are destroyed.</p>
+
+<h2>Why does Backburner exist?</h2>
+
+<ul>
+<li>Performance</li>
+<li>Modularity</li>
+<li>Cleaner code</li>
+<li>Better debugging</li>
+<li>Sharing the wealth</li>
+</ul>
+
+
+<p>Erik asserts that the source code for Backburner is very readable.</p>
+
+<p>Debugging deferred / asynchronous actions is hard.</p>
+
+<p>But Backburner makes this much easier.</p>
+
+<p>New York Ember meeting talks about Ember testing.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ember SC Emberella]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-emberella/"/>
+    <updated>2013-05-21T00:00:00-07:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2013/05/21/ember-sc-emberella</id>
+    <content type="html"><![CDATA[<p>A hodgepodge of useful little functionalities.</p>
+
+<!-- more -->
+
+
+<p>Most experimental &ndash; only works in Safari.</p>
+
+<h2>Infinite Scroll &ndash; Sparse Array</h2>
+
+<p>Showed Mongo-backed database w/ million rows in it.</p>
+
+<p>Resizes appropriately as window is resized.</p>
+
+<h2>Grid View</h2>
+
+<p>Expands and contracts columns as window is resized horizontally.</p>
+
+<p>Github: <a href="https://github.com/realityendshere/emberella">emberella</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Natural Languages]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-natural-languages/"/>
+    <updated>2013-04-29T00:00:00-07:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-natural-languages</id>
+    <content type="html"><![CDATA[<h2>Summary</h2>
+
+<ul>
+<li>Natural Languages is the programming effort to understand natural languages (like <em>English</em>)
+so that software can help interpret information contained in the vast expanses of natural language
+expressions on the web.</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h3>Pros</h3>
+
+<ul>
+<li>Good top-down view</li>
+</ul>
+
+
+<h3>Cons</h3>
+
+<ul>
+<li>Sad to see that Ruby is not in the front vanguard in this effort.</li>
+</ul>
+
+
+<h2>Raw</h2>
+
+<p>What is Natural Language Processing?</p>
+
+<ul>
+<li>What is it?</li>
+<li>Why is it so Difficult?</li>
+<li>Why is it important?</li>
+</ul>
+
+
+<h3>Definition:</h3>
+
+<p>Analyzing, understanding and generating the language that humans use to interface with computers.</p>
+
+<ul>
+<li>Spell Checking</li>
+<li>Predictive Text</li>
+<li>Auto Summarization</li>
+<li>Content categorization</li>
+<li>Machine Translation</li>
+</ul>
+
+
+<p>Includes things like OCR which are huge efforts in themselves.</p>
+
+<p>Example: &ldquo;Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo.&rdquo;</p>
+
+<p>No perfect solution exists</p>
+
+<ul>
+<li>Experts disagree</li>
+<li>Fixing one piece frequently breaks others.</li>
+<li>Language itself is a moving target.
+
+<ul>
+<li>Different cultures, grammar, syntax</li>
+<li>Language is constantly evolving</li>
+<li>Technological advances influence language.</li>
+</ul>
+</li>
+<li>Mobile devices</li>
+<li>Many aspects are computationally complex</li>
+<li>Today vs. 10 years ago</li>
+<li>Hardware has advanced</li>
+</ul>
+
+
+<h2>Why is it Important?</h2>
+
+<ul>
+<li>43% of employee&rsquo;s time spent in information hunting.</li>
+<li>Demand/need is increasing steeply.</li>
+<li>Everyone has a &ldquo;big data&rdquo; problem.</li>
+</ul>
+
+
+<h2>3 Common Approaches</h2>
+
+<ul>
+<li>rule-Based Analysis</li>
+<li>statistical analysis</li>
+<li>Machine learning</li>
+</ul>
+
+
+<h2>Basic Building Blocks</h2>
+
+<ul>
+<li>POS Tagging</li>
+<li>Chunking</li>
+<li>Sentence Detection</li>
+<li>Word stemming</li>
+<li>Tokenizing</li>
+<li>Work Relationships</li>
+<li>Co-Reference Resolution</li>
+<li>Named-Entity Recognition</li>
+</ul>
+
+
+<h2>Tools &amp; Libraries</h2>
+
+<ul>
+<li>NLP Toolkit (Python)
+
+<ul>
+<li>Leading NLP Toolkit/Framework</li>
+<li>Strong support from the academic world (SciPy, NumPy)</li>
+<li>Python was chosen for its expressiveness, ease-of-use</li>
+</ul>
+</li>
+<li>Ruby, not much
+
+<ul>
+<li>Chronic</li>
+<li>Linguistics</li>
+<li>Punkt Segmenter</li>
+<li>Ruby Stemmer (unmaintained)</li>
+<li>Treat (The Ruby NLP toolkit)
+
+<ul>
+<li>Extraction</li>
+<li>Chunking</li>
+<li>Sentence Segmentation</li>
+<li>Stemming</li>
+<li>Machine Learning</li>
+<li>Inflection</li>
+<li>Serialization</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>What happens when you need more?
+
+<ul>
+<li>JRuby</li>
+<li>Leverage well-established, mature Jana libraries.</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Know Thine App]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-monday-know-thine-app/"/>
+    <updated>2013-04-29T00:00:00-07:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-monday-know-thine-app</id>
+    <content type="html"><![CDATA[<h2>Summary</h2>
+
+<p>This was a &ldquo;marketing&rdquo; sell for a new <strong>Tilde</strong> product: <strong>Skylight</strong>, a Performance Measurement Utility.
+The purpose is to give you a tool for rapidly
+detecting, isolating, and fixing performance hiccups in your application.</p>
+
+<!-- more -->
+
+
+<p>I did sign up for the beta.</p>
+
+<h3>Pros</h3>
+
+<ul>
+<li>Shows promise in isolating causes even on rare problem events.</li>
+</ul>
+
+
+<h3>Cons</h3>
+
+<ul>
+<li>Yehuda Katz obviously rushed this presentation.  Too much repetition of &ldquo;long tail&rdquo; Web responses;
+not enough time
+on his
+product.</li>
+<li>He tried to differentiate <strong>Skylight</strong> from New Relic; I&rsquo;m not sure he succeeded.</li>
+</ul>
+
+
+<h2>Raw</h2>
+
+<p>About measuring your app.</p>
+
+<p>How do you validate your hypothesis?</p>
+
+<p>You need to measure anything that has value.</p>
+
+<p>Which Line is Slow?</p>
+
+<p>Developers are paid to add business value, not write code.</p>
+
+<p>Need a correct model model of how code is running by production delivering business value.</p>
+
+<p>Business value is the measure $ earned and compare it with historical data.  Use tools to detect thresholds.</p>
+
+<ul>
+<li>users that add items to the shopping cart</li>
+<li>items added</li>
+<li>items removed</li>
+<li>users checking out</li>
+<li>successful orders</li>
+</ul>
+
+
+<p>Need analogous measurement for developer.</p>
+
+<p>so, need to <em>measure it</em>.</p>
+
+<p>Performance is business value.</p>
+
+<p>An average measurement is not a great metric.</p>
+
+<ul>
+<li>mean (average)</li>
+<li>median (middle)</li>
+<li>standard deviation (variance)</li>
+</ul>
+
+
+<p> We mistakenly think that we only have to worry about values clustered around the mean.</p>
+
+<p> Average salary, for example, doesn&rsquo;t fit.  If we focus on the middle, we miss a large chunk of reality.</p>
+
+<p> Web responses are &ldquo;long tail&rdquo;.</p>
+
+<p>wonkish: log-normal-distribution</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Dual Booting Rails 2 and Rails 3]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-monday-dual-booting-rails-2-and-rails-3md/"/>
+    <updated>2013-04-29T00:00:00-07:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-monday-dual-booting-rails-2-and-rails-3md</id>
+    <content type="html"><![CDATA[<h2>Summary</h2>
+
+<ul>
+<li>You <em>can</em> dual boot Rails 2 and Rails 3</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h3>Pros</h3>
+
+<ul>
+<li>One of the most valuable sessions for me, in that we have &ldquo;gone to the wall&rdquo; to do a conversion,
+and we fail miserably because we run out of time and have to &ldquo;retreat&rdquo;.  Very demoralizing.</li>
+</ul>
+
+
+<h3>Cons</h3>
+
+<ul>
+<li>But what are the steps?  Fortunately, this was covered in a
+<a href="http://oldfartdeveloper.github.io/blog/railsconf2013/Thursday/UpgradingLongLivedRailsTo4.md">later session</a> by someone else.</li>
+</ul>
+
+
+<h2>Raw</h2>
+
+<h3>History/Reasons</h3>
+
+<p>Numbers&hellip;</p>
+
+<p>Upgrading to Rails 3</p>
+
+<ol>
+<li>Procrastinate vs.</li>
+<li>Goals</li>
+</ol>
+
+
+<p>Have to make some decisions:</p>
+
+<ul>
+<li>Putting it off</li>
+<li>Rearchitecting the app first</li>
+<li>Do it all in a big spike.2</li>
+<li>Have a ruby19 branch.</li>
+</ul>
+
+
+<p>Reasons to move forward:</p>
+
+<ul>
+<li>Rails 3? Why now?</li>
+<li>Someone will make upgrading easier soon!</li>
+<li>Oh man, this is going to be awful.</li>
+</ul>
+
+
+<p>But, here&rsquo;s what we want:</p>
+
+<ol>
+<li>burke/zeus</li>
+<li>recruiting people to work on Rails 2.x is really uphill now</li>
+<li>security fixes.</li>
+</ol>
+
+
+<p>Finally, they were finding it was more expensive to stay on Rails 2 than it was to upgrade to Rails 3.</p>
+
+<p><em>New Relic took 2 months to do it.</em></p>
+
+<h3>Rules</h3>
+
+<p>Don&rsquo;t break the world.</p>
+
+<ul>
+<li>Can&rsquo;t bring down production.</li>
+<li>Keep everyone (i.e. other developers) happy.  Don&rsquo;t make them miss deadlines.</li>
+<li>Keep ourselves happy</li>
+</ul>
+
+
+<h3>How They Did It</h3>
+
+<p><strong>Most Memorable Technique: Keep everything in the master branch and use environment variable to switch
+between Rails 2 and Rails 3.</strong>  In this way, you don&rsquo;t have the constant merging.</p>
+
+<p>They used rails/rails_upgrade</p>
+
+<p>Spent a lot of time in bundler</p>
+
+<p>In Gemfile</p>
+
+<p>platforms :ruby_18 do
+  gem &lsquo;debugger&rsquo;
+end</p>
+
+<p>platforms :ruby_19 do
+  gem &lsquo;ruby-debug&rsquo;
+end</p>
+
+<p>Monkey patched Bundler so that they could have two Gemfile.lock files</p>
+
+<p>So, now they could do incremental improvements:</p>
+
+<p>$ script/server</p>
+
+<p>$ script/server3</p>
+
+<p>Now they could to go master.</p>
+
+<p>Now they could merge into upstream, but the Rails 3 was installed in production.</p>
+
+<p>So, use environment variable to change config.rb to either load bundler (3) or rails(2)</p>
+
+<p>In config/application.rb</p>
+
+<p>def self.rails3_config(config)</p>
+
+<p>&hellip;</p>
+
+<p>def self.rails2_config(config)</p>
+
+<p>Have tests you trust.</p>
+
+<p>Jenkins</p>
+
+<p>Created a Rails 3 job.  They could convert the Rails 2 test into Rails 3.</p>
+
+<p>Branch by abstraction: a pattern for making large scale</p>
+
+<p>Disable deprecation warnings.</p>
+
+<p>Routes still work.
+Od mailers still work.
+Old models can still work.</p>
+
+<p>Helpers &ndash; All helpers are included by default.</p>
+
+<p>Error handling &ndash; watch for Rails 3 moving error handling moving to middleware.</p>
+
+<p>Rollout:</p>
+
+<p>We want you to test in Rails 3.
+Make everyone a tester.
+A couple of days before production, all submits went to Rails 3.</p>
+
+<p>Rails 2 and Rails 3 are incompatible sessions.</p>
+
+<p>envato / rails_4_session_flash_backport</p>
+
+<p>Pause the world on the day you deploy.</p>
+
+<p>Minor breakages:</p>
+
+<ul>
+<li>Breaking the audi trail.  Lost track of who changed.  Caused by obsolete 3rd-party gem.  Moral: unexpected things
+will happen.</li>
+<li>ActiveScaffold &ndash; moved from Protytpe to Jquery.</li>
+<li>Lost BackgroundJob instrumentation.</li>
+</ul>
+
+
+<p>Finally tagging green build off of Rails 2 tests.</p>
+
+<p>Afterwards, cleaning up all the code.</p>
+
+<h2>Lessons learned</h2>
+
+<ol>
+<li>Be aware that you have potential to hurt other develoeprs</li>
+<li>Deprecate ActiveScaffold</li>
+<li>Allocate sufficient resources for cleanup after deployment.</li>
+<li>Jenins jobs for both rails versions was invaluable.</li>
+</ol>
+
+
+<h2>Place to get libraries that they used that might be useful for us:</h2>
+
+<p>newrelic.com/rails3_upgrade</p>
+
+<p>Use Resque.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DHH Keynote]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-monday-dhh-keynote/"/>
+    <updated>2013-04-29T00:00:00-07:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-monday-dhh-keynote</id>
+    <content type="html"><![CDATA[<h2>Summary</h2>
+
+<ul>
+<li>DHH stays consistent: Rails purpose is to be a big tent but not everything for all people.</li>
+<li>Web is about HTML.  Other frameworks fall away (Silverlight, Flash)</li>
+<li>Quote from Joel on Software: &ldquo;Good Software Takes Ten Years.</li>
+</ul>
+
+
+<!-- more -->
+
+
+<p>Rest of talk covered the <em>BaseCamp</em> way of doing things, mainly to speed up dynamic HTML generation:</p>
+
+<ul>
+<li>Key-based cache expiration (generational caching).</li>
+<li>Russian Doll nested caching.</li>
+<li>Use of Javascript sparingly to handle local issues like timezone.</li>
+</ul>
+
+
+<h3>Pros</h3>
+
+<ul>
+<li>Liked how he put HTML processing as the purpose of Rails.</li>
+</ul>
+
+
+<h3>Cons</h3>
+
+<ul>
+<li>Neglected to mention that BaseCamp now has nearly a megabyte of Javascript.</li>
+<li>More subdued presentation; I enjoy the fire/brimstone more.</li>
+</ul>
+
+
+<h2>Raw</h2>
+
+<p>Good frameworks are extractions, not inventions.</p>
+
+<p>Rails started in 2003 (10 Years)</p>
+
+<p>2003: 512MB costs $49
+2013: 8GB costs $29</p>
+
+<p>Other communities value stability.</p>
+
+<p>Ruby/Rails community willing to sacrifice for progress.  Pioneer spirit.</p>
+
+<p>Rails 2.3 / 2009 is the halfway.</p>
+
+<p>&ldquo;Good Software Takes Ten years.  Get Used To It&rdquo; &ndash; Joel on Software, 2001</p>
+
+<p>Purpose: big tent, but not be everything for all people.</p>
+
+<p>Context: Dynamic Hypertext documents</p>
+
+<p>the HyperText Markup Lanuage is more than just a delivery mechanism.</p>
+
+<p>Rails purpose is to support web documents and things that &ldquo;feel like documents.&rdquo;  This is the part of IT that DHH is
+interested in.</p>
+
+<p>Constraints are liberating.</p>
+
+<p>Silverlight, Flash dissed HTML.  DHH maintains that HTML is the inspiration.</p>
+
+<p>iOS is more interesting but is still mostly used for games (according to DHH).</p>
+
+<p>So, newest Basecamp embraces the document.  Evolve the document so that it&rsquo;s a worthy competitor to the
+GUI-approaches.  Faster.  So can we get the speed without changing the underlying HTML patterns?</p>
+
+<p>To make things faster:</p>
+
+<ul>
+<li>Key-based cache expiration (generational caching).</li>
+<li>Russian Doll nested caching</li>
+</ul>
+
+
+<p>But, what about time zones?</p>
+
+<p>Use Javascript to take care of this.</p>
+
+<p>Some things then can do Turbolinks</p>
+
+<p>Finally: Polling for JavaScript updates.</p>
+
+<p>RJS used.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Maintainable Views]]></title>
+    <link href="http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-maintainable-views/"/>
+    <updated>2013-04-29T00:00:00-07:00</updated>
+    <id>http://oldfartdeveloper.github.io/blog/2013/04/29/railsconf-2013-maintainable-views</id>
+    <content type="html"><![CDATA[<h2>Summary</h2>
+
+<ul>
+<li>Some suggestions for doing good software practices in view templates</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h3>Pros</h3>
+
+<ul>
+<li>Contrasted conflicting needs of designers vs programmers.</li>
+<li>Good discussion of helpers vs partials vs presenters and where to use each.</li>
+</ul>
+
+
+<h3>Cons</h3>
+
+<ul>
+<li>Can&rsquo;t think of any</li>
+</ul>
+
+
+<h2>Raw</h2>
+
+<p>Assumption: already know how to write markup.</p>
+
+<p>Unmaintainable templates</p>
+
+<ul>
+<li>Markup repetition</li>
+<li>Logic in templates</li>
+</ul>
+
+
+<p>Markup Repetition</p>
+
+<ul>
+<li>Good designer repeat tehmselves.</li>
+<li>Good programmers don&rsquo;t.</li>
+</ul>
+
+
+<p>Avoid markup repetition</p>
+
+<ul>
+<li>Abstract interface components.</li>
+<li>Use partials.</li>
+</ul>
+
+
+<p>Logic in templates</p>
+
+<ul>
+<li>Highly repetitive.</li>
+<li>Painful to test.</li>
+</ul>
+
+
+<h2>Problems with Helpers</h2>
+
+<ul>
+<li>Big projects end up with <em>tons</em>.</li>
+<li>Difficult to organize.</li>
+<li>Complex logic isn&rsquo;t well suited for them.</li>
+<li>Don&rsquo;t <em>feel</em> right.</li>
+</ul>
+
+
+<p>What presenter wants is decorator pattern.</p>
+
+<ul>
+<li>wraps a single object</li>
+<li>Transparent interface</li>
+<li>forwards methods to originla object</li>
+</ul>
+
+
+<p>In our case:</p>
+
+<ul>
+<li>Adds presentational logic to models without affecting the model itself.</li>
+</ul>
+
+
+<p>Implementing a Decorator.</p>
+
+<ul>
+<li>Uses a +method_missing* to forward object.</li>
+<li>He has a base decorator class.</li>
+<li>Whatever is used for a model goes into a single Decorator subclass for that model.</li>
+<li>In the view, the decorator looks like the original model object.</li>
+</ul>
+
+
+<p>Draper</p>
+
+<ul>
+<li>Access to the view context</li>
+<li>Easily decorate collections</li>
+<li>Prtends to be decorated object (helpful for +form_for+ and such)</li>
+<li>Easily decorate associations</li>
+</ul>
+
+
+<p>Complex views</p>
+
+<p>Unique and/or complex UI behavior will quickly outgrow helpers</p>
+
+<p>Uses Presentation Model</p>
+
+<p>The Presentation Model is of a self-contained class that represents all the data and behivor of the UIT window.</p>
+
+<p>Learning from JavaScript libraries</p>
+
+<ul>
+<li>Thanks, Backbone.</li>
+</ul>
+
+
+<p>So, presenter is passed</p>
+
+<ul>
+<li>template</li>
+<li>each model object needed.</li>
+</ul>
+
+
+<p>a <code>#to_s</code> method renders.</p>
+
+<p>Presenter likes to use a helper to create the presenter/view objects.</p>
+
+<p>This concept comes built-in with Rails. <code>form_for</code> which you can create a custom <code>FormBuilder</code> class.</p>
+
+<p>Final tips</p>
+
+<ul>
+<li>Use i18n</li>
+<li>Find gems to do this work for you (eg. simple_form, table_cloth)</li>
+</ul>
+
+
+<p>New project called <code>self</code> that is trying to solve a lot of these concerns.</p>
 ]]></content>
   </entry>
   
