@@ -3,9 +3,13 @@
 .left {
 //  background-color: Red;
   float: left;
-  width: 50%;
+  width: 10%;
 }
 .right {
 //  background-color: Aqua;
-  margin-left: 50%;
+  margin-left: 10%;
+}
+.fit {
+  max-width: 60%;
+  max-height: 60%;
 }
